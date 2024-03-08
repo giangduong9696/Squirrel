@@ -1,0 +1,135 @@
+body {
+    background: #262e6f;
+}
+p {
+    color : white;
+    text-align: center;
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+    /* Clip Background Image */
+
+    background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+
+    /* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+
+
+}
+.world {
+    position: absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0px;
+    bottom:0;
+    width:800px;
+    height:200px;
+}
+
+
+/* Tạo cube đơn giản */
+
+
+.box {
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 100px;
+    height: 100px;
+    animation: rotate 5s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+.box:nth-of-type(1) {
+    animation-delay:-5s;
+    left:-600px;
+}
+.box:nth-of-type(2) {
+    animation-delay:-4s;
+    left:-300px;
+}
+.box:nth-of-type(3) {
+    animation-delay:-3s;
+    left:0px;
+}
+.box:nth-of-type(4) {
+    animation-delay:-2s;
+    left:600px;
+}
+.box:nth-of-type(5) {
+    animation-delay:-1s;
+    left:600px;
+}
+.box:nth-of-type(5) {
+    animation-delay:-1s;
+    left:600px;
+}
+.plane1, .plane2 {
+    position: absolute;
+    opacity:0.8;
+}
+.plane2 {
+    transform: rotateY(90deg);
+}
+/* trái tim */
+.heart {
+    background-color: red;
+    height: 50px;
+    transform: rotate(-45deg);
+    width: 50px;
+}
+.heart:before {
+    content: "";
+    background-color: pink;
+    border-radius: 100%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    top:-25px;
+}
+.heart:after {
+    content: "";
+    background-color: pink;
+    border-radius: 100%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    top:0px;
+    left:25px;
+}
+
+/* Chuyển động */
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg) rotateZ(25deg) translateY(50px);
+    }
+    50% {
+        transform: rotateY(270deg) rotateZ(25deg) translateY(-50px);
+    }
+    100% {
+        transform: rotateY(360deg) rotateZ(25deg) translateY(50px);
+    }
+}
+@-webkit-keyframes aitf {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+

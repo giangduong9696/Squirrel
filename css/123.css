@@ -1,0 +1,8 @@
+.squirrel {
+    display: flex;
+    justify-content: center;
+}
+
+.squirrel > div,
+.heart > div {
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/love.css">
+    <link rel="stylesheet" href="./css/123.css">
+    <title>Happy 8/3</title>
+</head>
+
+<body>
+<div>
+    <div class='squirrel'>
+        <div class='s1'></div>
+        <div class='s2' id="music-toggle-2"></div>
+        <div class='s3'></div>
+        <div class='s4' id="music-toggle"></div>
+        <div class='s5'></div>
+        <div class='s6'></div>
+        <div class='s7'></div>
+        <div class='s8'></div>
+        <div class='s9'></div>
+        <div class='s10'></div>
+        <div class='s11' id="music-toggle-1"></div>
+        <div class='s12'></div>
+        <div class='mask'></div>
+        <div class='shadow'></div>
+    </div>
+
+    <div class="world">
+        <div class="box">
+            <div class="plane1">
+                <div class="heart"></div>
+            </div>
+            <div class="plane2">
+                <div class="heart"></div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="plane1">
+                <div class="heart"></div>
+            </div>
+            <div class="plane2">
+                <div class="heart"></div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="plane1">
+                <div class="heart"></div>
+            </div>
+            <div class="plane2">
+                <div class="heart"></div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="plane1">
+                <div class="heart"></div>
+            </div>
+            <div class="plane2">
+                <div class="heart"></div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="plane1">
+                <div class="heart"></div>
+            </div>
+            <div class="plane2">
+                <div class="heart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<audio id="audio" src="./music/모던한 카페에서 나오는 고급스러운 피아노 음악 l GRASS COTTON+.mp3"></audio>
+<audio id="audio1" src="./music/goblin-ost-crush-piano-cover-by-riyandi-kusuma.mp3"></audio>
+
+</body>
+
+<script>
+    const musicToggle = document.getElementById('music-toggle');
+    const musicToggle1 = document.getElementById('music-toggle-1');
+    const musicToggle2 = document.getElementById('music-toggle-2');
+    const audio = document.getElementById('audio');
+    const audio1 = document.getElementById('audio1');
+
+    musicToggle.addEventListener('click', function() {
+        audio.paused ?  audio.play() : audio.pause();
+    });
+
+    musicToggle1.addEventListener('click', function() {
+        audio.paused ?  audio.play() : audio.pause();
+    });
+
+    musicToggle2.addEventListener('click', function() {
+        audio1.paused ?  audio1.play() : audio1.pause();
+    });
+</script>
+</html>
