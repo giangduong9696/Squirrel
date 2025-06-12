@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/love.css">
     <link rel="stylesheet" href="./css/123.css">
-    <title>Happy 8/3</title>
+    <title>Squirrel</title>
 </head>
 
 <body>
@@ -22,9 +22,9 @@
         <div class='s6'></div>
         <div class='s7'></div>
         <div class='s8'></div>
-        <div class='s9'></div>
+        <div class='s9' id="music-toggle-1"></div>
         <div class='s10'></div>
-        <div class='s11' id="music-toggle-1"></div>
+        <div class='s11'></div>
         <div class='s12'></div>
         <div class='mask'></div>
         <div class='shadow'></div>
@@ -76,6 +76,7 @@
 
 <audio id="audio" src="./music/모던한 카페에서 나오는 고급스러운 피아노 음악 l GRASS COTTON+.mp3"></audio>
 <audio id="audio1" src="./music/goblin-ost-crush-piano-cover-by-riyandi-kusuma.mp3"></audio>
+<audio id="audio2" src="./music/hoa-ost.mp3"></audio>
 
 </body>
 
@@ -85,17 +86,19 @@
     const musicToggle2 = document.getElementById('music-toggle-2');
     const audio = document.getElementById('audio');
     const audio1 = document.getElementById('audio1');
+    const audio2 = document.getElementById('audio2');
 
     musicToggle.addEventListener('click', function() {
         audio.paused ?  audio.play() : audio.pause();
     });
 
-    musicToggle1.addEventListener('click', function() {
-        audio.paused ?  audio.play() : audio.pause();
+    musicToggle2.addEventListener('click', function() {
+        audio2.paused ?  audio2.play() : audio2.pause();
     });
 
-    musicToggle2.addEventListener('click', function() {
+    musicToggle1.addEventListener('click', function() {
         audio1.paused ?  audio1.play() : audio1.pause();
     });
 </script>
 </html>
+
